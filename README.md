@@ -7,7 +7,7 @@
 
 ---
 
-
+### Goal
 Step 1 🏃  
   - branch main
   - TypeScript 적용   
