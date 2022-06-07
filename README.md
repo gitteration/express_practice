@@ -1,4 +1,12 @@
-# MyStudySpace
+### MyStudySpace  
+# Version  
+  - Node - 16.13.2
+  - MariaDB - 10.4.14
+  - TypeScript - 4.7.2
+
+
+---
+
 
 Step 1 🏃  
   - branch main
