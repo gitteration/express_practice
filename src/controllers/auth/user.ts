@@ -19,11 +19,11 @@ const user_controllers = {
 			user.setPassword = hash_password;
 			user.setPasswordSoltKey = salt;
 			await user_servic.createUser(user); 
-			res.status(status);
+			res.status(status).json({status:status, message:message});
 		}catch(err){
 			status = 500;
 			console.error('createUser', err);
-			res.status(status).json({status:status, message:err.message});
+			res.status(status).json({status:status, err:err});
 		}
 	},
 	login : async function(req: Request, res: Response, next: NextFunction){
@@ -36,11 +36,11 @@ const user_controllers = {
 			const [hashedPassword,key]:string = await user_servic.selectUserByID(user);
 			user_servic.vaildateUserHashPassword(password, hashedPassword, key);
 			req.session.uid = user.getId;
-			res.status(status).json({status:status, data:user.getId});
+			res.status(status).json({status:status, message:message, data:user.getId});
 		}catch(err){
 			status = 500;
 			console.error('login', err);
-			res.status(status).json({status:status, message:err.message});
+			res.status(status).json({status:status, err:err});
 		}
 	},
 	logout : function(req: Request, res: Response, next: NextFunction){
