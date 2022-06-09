@@ -2,18 +2,18 @@ import excuteQuery from '../db/mysql';
 
 class User {
 	constructor(
-		private id: String,
-		private password: String,
-		private password_solt_key?: String,
+		private id: string,
+		private password: string,
+		private password_solt_key?: string,
 		
 	){}
-	set setPassword(pwd:String){
+	set setPassword(pwd:string){
 		this.password = pwd;
 	}
-	set setPasswordSoltKey(salt:String){
+	set setPasswordSoltKey(salt:string){
 		this.password_solt_key = salt;
 	}
-	get getId():String{
+	get getId():string{
 		return this.id;
 	}
 	async selectUserByID(user:User):Promise<[]>{

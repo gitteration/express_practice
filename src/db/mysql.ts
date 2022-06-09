@@ -13,7 +13,7 @@ const pool = mysql.createPool(mysql_config);
 			
 })();
 
-async function excuteQuery(query:String):Promise<any>{
+async function excuteQuery(query:string):Promise<any>{
 	let connection:any;
 	try{
 		connection = await pool.getConnection();

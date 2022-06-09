@@ -6,8 +6,8 @@ const user_controllers = {
 		let message = 'success';
 		let status = 200;
 		try{
-			const id: String = req.body.id;
-			const password: String = req.body.password;
+			const id: string = req.body.id;
+			const password: string = req.body.password;
 			if(!id || !password){
 				message = `id or password empty!! email:${id}, password:${password}`;
 				throw new Error(message);
@@ -30,10 +30,10 @@ const user_controllers = {
 		let message = 'success';
 		let status = 200;
 		try{
-			const id:String = req.body.id;
-			const password:String = req.body.password;
+			const id:string = req.body.id;
+			const password:string = req.body.password;
 			const user = new User(id, password);
-			const [hashedPassword,key]:String = await user_servic.selectUserByID(user);
+			const [hashedPassword,key]:string = await user_servic.selectUserByID(user);
 			user_servic.vaildateUserHashPassword(password, hashedPassword, key);
 			req.session.uid = user.getId;
 			res.status(status).json({status:status, data:user.getId});

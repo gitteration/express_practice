@@ -7,7 +7,7 @@ const user_controllers = {
 			throw new Error('올바른 이메일 형식이 아닙니다.');
 		}
 	},
-	validateUserPassword : function(user:any):String[]{
+	validateUserPassword : function(user:any):string[]{
 		const regPassword =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$/;
 		if(user.password.match(regPassword) == null){
 			throw new Error('올바른 비밀번호 형식이 아닙니다.');
@@ -18,7 +18,7 @@ const user_controllers = {
 			return [hash_password, salt];
 		}
 	},
-	vaildateUserHashPassword : function(input_password:String, user_hash_password:String, user_solt_key:String){
+	vaildateUserHashPassword : function(input_password:string, user_hash_password:string, user_solt_key:string){
 		const validation_key = createPbkdf2(input_password, user_solt_key);
 		const validation_password = validation_key.toString("base64");
 		if (user_hash_password != validation_password){
@@ -32,7 +32,7 @@ const user_controllers = {
 		}else{
 		}
 	},
-	selectUserByID : async function(user:any):Promise<[String,String]>{
+	selectUserByID : async function(user:any):Promise<[string,string]>{
 		const value = await user.selectUserByID(user);
 		if(value.length == 0){
 			throw new Error('없는 아이디입니다.');
