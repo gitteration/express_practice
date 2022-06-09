@@ -10,11 +10,11 @@ const port = 3000;
 app.use(
     session({
         secret: 'keyboard cat',
-        rolling : false,                // 요청 시 쿠키 유지 시간을 리셋하는 옵션
+        rolling : true,                  // 요청 시 쿠키 유지 시간을 리셋하는 옵션
         cookie: { 
-            httpOnly:true,               
+            httpOnly:false,               
             path : '/',                  // 쿠키를 적용할 route 설정
-            secure: true,                // 보안을 위해 true 권장 
+            secure: false,               // 보안을 위해 true 권장 -> 클라이언트에 쿠키 안 보임
             maxAge : 60 * 60 * 10**3     // 쿠키 유지 시간 => 60분
         }
     }),
