@@ -23,11 +23,13 @@ const user_controllers = {
 		}catch(err){
 			status = 500;
 			console.error('createUser', err);
-			res.status(status).json({status:status, err:err});
+			if(err instanceof Error){
+				message = err.message;
+			}
+			res.status(status).json({status:status, message:message});
 		}
 	},
 	login : async function(req: Request, res: Response, next: NextFunction){
-		console.log(req.body)
 		let message = 'success';
 		let status = 200;
 		try{
@@ -41,7 +43,10 @@ const user_controllers = {
 		}catch(err){
 			status = 500;
 			console.error('login', err);
-			res.status(status).json({status:status, err:err});
+			if(err instanceof Error){
+				message = err.message;
+			}
+			res.status(status).json({status:status, message:message});
 		}
 	},
 	logout : function(req: Request, res: Response, next: NextFunction){
