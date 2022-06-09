@@ -27,6 +27,7 @@ const user_controllers = {
 		}
 	},
 	login : async function(req: Request, res: Response, next: NextFunction){
+		console.log(req.body)
 		let message = 'success';
 		let status = 200;
 		try{
