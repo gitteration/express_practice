@@ -2,30 +2,14 @@ import createError from 'http-errors';
 import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import routers from './src/routes/index';
-import session from 'express-session';
+import session from './src/authentication/session';
+
 
 const app = express();
 const port = 3000;
 
-app.use(
-    session({
-        secret: 'keyboard cat',
-        rolling : true,                  // 요청 시 쿠키 유지 시간을 리셋하는 옵션
-        cookie: { 
-            httpOnly:false,               
-            path : '/',                  // 쿠키를 적용할 route 설정
-            secure: false,               // 보안을 위해 true 권장 -> 클라이언트에 쿠키 안 보임
-            maxAge : 60 * 60 * 10**3     // 쿠키 유지 시간 => 60분
-        }
-    }),
-);
-
-declare module 'express-session' {
-    interface SessionData {
-        uid: string;
-    }
-}
-
+// session 적용 
+app.use(session);
 
 // view engine setup
 app.set('views', path.join(__dirname, './src/views'));
