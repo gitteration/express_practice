@@ -14,6 +14,7 @@ Copyright ©2022 - Colorlib All rights reserved Source https://colorlib.com/wp/t
 ### Goal
 Step 1 🏃  
   - branch main
+  - Swagger 적용
   - TypeScript 적용   
   - Session 적용
   - JWT 적용
