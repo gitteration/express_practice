@@ -4,7 +4,6 @@ import path from 'path';
 import routers from './src/routes/index';
 import session from './src/authentication/session';
 
-
 const app = express();
 const port = 3000;
 
@@ -15,9 +14,6 @@ app.use(session);
 app.set('views', path.join(__dirname, './src/views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, './src/public')));
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
 // router import
 app.use(routers);
