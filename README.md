@@ -20,10 +20,6 @@ Step 1 🏃
   - GraphQl 적용
   - TypeORM 적용
 
-Step 2 🧍
-  - branch nest 
-  - Nest.js로 마이그레이션 
-
 Step 3 🧍  
   - TDD 적용
   - 단일 테스트 적용
