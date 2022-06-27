@@ -17,12 +17,12 @@ Step 1 🏃
   - TypeScript 적용   
   - Session 적용
   - JWT 적용
+  - GraphQl 적용
+  - TypeORM 적용
 
 Step 2 🧍
   - branch nest 
-  - Nest.js 적용
-  - GraphQl 적용
-  - TypeORM 적용  
+  - Nest.js로 마이그레이션 
 
 Step 3 🧍  
   - TDD 적용
