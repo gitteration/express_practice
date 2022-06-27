@@ -15,6 +15,8 @@ app.set('views', path.join(__dirname, './src/views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, './src/public')));
 
+app.use(express.json());    // 해당 미들웨어를 설정해줘야 json으로 넘어오는 데이터를 캐치할 수 있다.
+
 // router import
 app.use(routers);
 
