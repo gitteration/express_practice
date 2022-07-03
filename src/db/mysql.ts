@@ -1,5 +1,5 @@
 import mysql from 'mysql2/promise';
-const mysql_config = require('../config/db_config').mysql;
+const mysql_config = require('../config/db').mysql;
 const pool = mysql.createPool(mysql_config);
 
 (async function(){	// mariadb connection check
