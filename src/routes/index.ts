@@ -7,11 +7,15 @@ import path from 'path';
 const swagger_spec = YAML.load(path.join(__dirname,'./../config/swagger/swagger.yaml'));
 const router = express.Router();
 
+// index 
+// 바로 api-documents로 넘겨버리자
+router.get('/', (req:Request, res:Response, next:NextFunction) => res.redirect('/api-documents'));
+
 // auth 
 router.use('/auth', userRouter);
 
 //swagger
-router.use('/', swagger_ui.serve, swagger_ui.setup(swagger_spec));
+router.use('/api-documents', swagger_ui.serve, swagger_ui.setup(swagger_spec));
 
 export = router;
 

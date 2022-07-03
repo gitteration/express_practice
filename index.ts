@@ -3,6 +3,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import routers from './src/routes/index';
 import session from './src/authentication/session';
+import { runInNewContext } from 'vm';
 
 const app = express();
 const port = 3000;
@@ -32,6 +33,6 @@ app.use(function (err:Error , req: Request, res: Response, next: NextFunction) {
 
 app.listen(port, () => {
     console.log(`port : ${port}`);
- });
+});
  
 export = app;
