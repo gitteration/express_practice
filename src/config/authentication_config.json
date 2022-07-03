@@ -1,0 +1,15 @@
+{
+	"session" : {
+		"secret": "keyboard cat",
+        "rolling" : true,                  
+        "cookie": { 
+            "httpOnly":false,               
+            "path" : "/",                  
+            "secure": false,               
+            "maxAge" : 3600000
+		}
+	},
+	"jwt" : {
+
+	}
+}

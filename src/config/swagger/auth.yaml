@@ -1,0 +1,65 @@
+/auth/users:
+  post:
+    tags: [Auth]
+    summary: 유저 생성
+    requestBody:
+      required: 
+        - id
+        - password
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              password:
+                type: string
+            example:
+              id: 'test123@test.com(이메일 형식)'
+              password: '@Asd456456546(특수문자, 대문자, 소문자 1개이상 포함 + 10자 이상)'
+    responses:
+      '1XX(정보)':
+        $ref: 'openapi.yaml#/components/responses/1XX'
+      '2XX(성공)':
+        $ref: 'openapi.yaml#/components/responses/2XX'
+      '3XX(리다이렉션)':
+        $ref: 'openapi.yaml#/components/responses/3XX'
+      '4XX(클라이언트 오류)':
+        $ref: 'openapi.yaml#/components/responses/4XX'
+      '5XX(서버 오류)':
+        $ref: 'openapi.yaml#/components/responses/5XX'
+
+
+
+/auth/users/status:
+  post:
+    tags: [Auth]
+    summary: 유저 로그인
+    requestBody:
+      required: 
+        - id
+        - password
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              password:
+                type: string
+            example:
+              id: 'test123@test.com'
+              password: '@Asd456456546'
+    responses:
+      '1XX(정보)':
+        $ref: 'openapi.yaml#/components/responses/1XX'
+      '2XX(성공)':
+        $ref: 'openapi.yaml#/components/responses/2XX'
+      '3XX(리다이렉션)':
+        $ref: 'openapi.yaml#/components/responses/3XX'
+      '4XX(클라이언트 오류)':
+        $ref: 'openapi.yaml#/components/responses/4XX'
+      '5XX(서버 오류)':
+        $ref: 'openapi.yaml#/components/responses/5XX'
