@@ -8,8 +8,8 @@ const user_controllers = {
 		}
 	},
 	validateUserPassword : function(user:any):string[]{
-		const regPassword =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{10,}$/;
-		if(user.password.match(regPassword) !== null){
+		const regPassword =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+-=])[A-Za-z\d!@#$%^&*()_+-=]{10,}$/
+		if(user.password.match(regPassword) == null){
 			throw new Error('올바른 비밀번호 형식이 아닙니다.');
 		}else{
 			const salt = createRandomByteBase64();
