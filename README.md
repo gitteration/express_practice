@@ -5,7 +5,7 @@
   - TypeScript - 4.7.2
 
   
-![화면 캡처 2022-06-27 225810](https://user-images.githubusercontent.com/55491073/175959400-e4b2f984-c6de-4188-9c13-f3a2becbbf3f.png)  
+![화면 캡처 2022-07-05 140743](https://user-images.githubusercontent.com/55491073/177253586-211fd015-9804-4d83-bbf2-d0ab5f436d30.png)  
 it's project index page(swagger)  
 
 ---
