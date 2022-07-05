@@ -29,7 +29,6 @@ const user_controllers = {
 		const value = await user.selectUserByID(user);
 		if(value != 0){
 			throw new Error('중복된 아이디가 있습니다');
-		}else{
 		}
 	},
 	selectUserByID : async function(user:any):Promise<[string,string]>{

@@ -15,70 +15,83 @@
     
     <!-- Style -->
     <link rel="stylesheet" href="./template/css/style.css">
-
+    
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Login #7</title>
   </head>
+  <style>
+    .costom-swagger-ui {
+      width: 49.7%;
+      height: 820px;
+    }
+    .content {
+      width: 50% !important;
+      display: inline-block !important;
+      height: 500px;
+    }
+  </style>
   <body>
-  
-
-  
-  <div class="content">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="./template/images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
-        </div>
-        <div class="col-md-6 contents">
-          <div class="row justify-content-center">
-            <div class="col-md-8">
-              <div class="mb-4">
-              <h3>Sign In</h3>
-              <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
-            </div>
-            <form action="/auth/users/status" method="POST">
-              <div class="form-group first">
-                <label for="username" name="id">Username</label>
-                <input type="text" class="form-control" id="username" name="id">
-
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="./template/images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-6 contents">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="mb-4">
+                <h3>Sign In</h3>
+                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
               </div>
-              <div class="form-group last mb-4">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password">
+              <form action="/auth/users/status" method="POST">
+                <div class="form-group first">
+                  <label for="username" name="id">Username</label>
+                  <input type="text" class="form-control" id="username" name="id">
+
+                </div>
+                <div class="form-group last mb-4">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password" name="password">
+                  
+                </div>
                 
-              </div>
-              
-              <div class="d-flex mb-5 align-items-center">
-                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
-                  <input type="checkbox" checked="checked"/>
-                  <div class="control__indicator"></div>
-                </label>
-                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
-              </div>
+                <div class="d-flex mb-5 align-items-center">
+                  <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                    <input type="checkbox" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label>
+                  <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+                </div>
 
-              <input type="submit" value="Log In" class="btn btn-block btn-primary">
+                <input type="submit" value="Log In" class="btn btn-block btn-primary">
 
-              <span class="d-block text-left my-4 text-muted">&mdash; or login with &mdash;</span>
-              
-              <div class="social-login">
-                <a href="#" class="facebook">
-                  <span class="icon-facebook mr-3"></span> 
-                </a>
-                <a href="#" class="twitter">
-                  <span class="icon-twitter mr-3"></span> 
-                </a>
-                <a href="#" class="google">
-                  <span class="icon-google mr-3"></span> 
-                </a>
+                <span class="d-block text-left my-4 text-muted">&mdash; or login with &mdash;</span>
+                
+                <div class="social-login">
+                  <a href="#" class="facebook">
+                    <span class="icon-facebook mr-3"></span> 
+                  </a>
+                  <a href="#" class="twitter">
+                    <span class="icon-twitter mr-3"></span> 
+                  </a>
+                  <a href="#" class="google">
+                    <span class="icon-google mr-3"></span> 
+                  </a>
+                </div>
+              </form>
               </div>
-            </form>
             </div>
           </div>
-          
         </div>
-        
       </div>
+      <footer>
+        <a href='https://colorlib.com/wp/template/login-form-07/'>
+          <p style='text-align: center'>Copyright ©2022 - Colorlib All rights reserved </p>
+        </a>
+      </footer>
     </div>
-  </div>
 
   
     <script src="./template/js/jquery-3.3.1.min.js"></script>
@@ -86,9 +99,10 @@
     <script src="./template/js/bootstrap.min.js"></script>
     <script src="./template/js/main.js"></script>
   </body>
-  <footer>
-    <a href='https://colorlib.com/wp/template/login-form-07/'>
-      <p style='text-align: center'>Copyright ©2022 - Colorlib All rights reserved </p>
-    </a>
-  </footer>
+  <iframe class="costom-swagger-ui" src="http://localhost:3000/api-documents"></iframe>
+  <script>
+  </script>
+
+
+
 </html>

@@ -9,7 +9,7 @@ const router = express.Router();
 
 // index 
 // 바로 api-documents로 넘겨버리자
-router.get('/', (req:Request, res:Response, next:NextFunction) => res.redirect('/api-documents'));
+router.get('/', (req:Request, res:Response, next:NextFunction) => res.render('index'));
 
 // auth 
 router.use('/auth', userRouter);
