@@ -26,7 +26,6 @@ class User {
 		const value = await excuteQuery(query);
 		return value;
 	}
-
 }
 
 export = User;
