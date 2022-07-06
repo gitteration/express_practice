@@ -1,6 +1,6 @@
 {
 	"session" : {
-		"secret": "keyboard cat",
+		"secret": "cosy",
         "rolling" : true,                  
         "cookie": { 
             "httpOnly":false,               

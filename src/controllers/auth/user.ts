@@ -1,5 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import User from '../../models/user';
+import startSocketIO  from "../../modules/socket_io";
+  
 const user_servic = require('../../services/auth/user');
 const user_controllers = {
 	createUser : async function(req: Request, res: Response, next: NextFunction){

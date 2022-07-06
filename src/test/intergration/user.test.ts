@@ -1,5 +1,5 @@
 import request from "supertest";
-import app from "../../.."
+import app from "../../../app"
 import assert from 'assert';
 const testUser = {
 	id:"test@test.com",

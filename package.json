@@ -22,7 +22,7 @@
     "build": "tsc -p .",
     "api-docs": "swagger-cli bundle ./src/config/swagger/openapi.yaml --outfile ./src/config/swagger/swagger.yaml --type yaml",
     "predev": "npm run api-docs",
-    "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" ./index.ts",
+    "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" ./server.ts",
     "test-intergration": "ts-mocha './src/test/intergration/*.test.ts' --timeout 10000"
   },
   "dependencies": {
@@ -38,6 +38,7 @@
     "express-session": "^1.17.3",
     "http-errors": "^2.0.0",
     "mysql2": "^2.3.3",
+    "socket.io": "^4.5.1",
     "swagger-cli": "^4.0.4",
     "swagger-express-router": "^1.0.0",
     "swagger-jsdoc": "^6.2.1",

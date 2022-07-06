@@ -98,9 +98,14 @@
     <script src="./template/js/popper.min.js"></script>
     <script src="./template/js/bootstrap.min.js"></script>
     <script src="./template/js/main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
   </body>
   <iframe class="costom-swagger-ui" src="http://localhost:3000/api-documents"></iframe>
   <script>
+      const socket = io();
+      socket.on("login_info", function(data) {
+        alert(data);
+      });
   </script>
 
 

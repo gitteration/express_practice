@@ -1,3 +1,7 @@
+/**
+ *  session and jwt
+ */
+
 import session from 'express-session';
 const session_config = require('../config/authentication').session;
 

@@ -2,11 +2,9 @@ import createError from 'http-errors';
 import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import routers from './src/routes/index';
-import session from './src/authentication/session';
-import { runInNewContext } from 'vm';
+import session from './src/modules/authentication';
 
 const app = express();
-const port = 3000;
 
 // session 적용 
 app.use(session);
@@ -31,8 +29,4 @@ app.use(function (err:Error , req: Request, res: Response, next: NextFunction) {
     res.render('error', {error:err});
 });
 
-app.listen(port, () => {
-    console.log(`port : ${port}`);
-});
- 
 export = app;
