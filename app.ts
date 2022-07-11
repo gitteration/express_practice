@@ -3,8 +3,13 @@ import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import routers from './src/routes/index';
 import session from './src/modules/authentication';
+import http from 'http';
+import startServer from './src/modules/server';
+import Socket from './src/modules/socket-io';
 
 const app = express();
+const server = http.createServer(app);
+const socket = new Socket(server, null);
 
 // session 적용 
 app.use(session);
@@ -28,5 +33,11 @@ app.use(function (req: Request, res: Response, next: NextFunction) {
 app.use(function (err:Error , req: Request, res: Response, next: NextFunction) {
     res.render('error', {error:err});
 });
+
+// start socket
+socket.start();
+
+// start server
+startServer(server);
 
 export = app;

@@ -22,7 +22,7 @@
     "build": "tsc -p .",
     "api-docs": "swagger-cli bundle ./src/config/swagger/openapi.yaml --outfile ./src/config/swagger/swagger.yaml --type yaml",
     "predev": "npm run api-docs",
-    "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" ./server.ts",
+    "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node\" ./app.ts",
     "test-intergration": "ts-mocha './src/test/intergration/*.test.ts' --timeout 10000"
   },
   "dependencies": {
