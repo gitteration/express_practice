@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import User from '../../models/user';
-import Socket from '../../modules/socket-io';
-
+import {emits} from '../../modules/socket-io';
 const user_servic = require('../../services/auth/user');
 const user_controllers = {
 	createUser : async function(req: Request, res: Response, next: NextFunction){
@@ -39,10 +38,9 @@ const user_controllers = {
 			const password:string = req.body.password;
 			const user = new User(id, password);
 			const [hashedPassword,key]:string = await user_servic.selectUserByID(user);
-			const socket = new Socket(null,null);
 			user_servic.vaildateUserHashPassword(password, hashedPassword, key);
 			req.session.uid = user.getId;
-			socket.test({message, user});
+			emits.login({status:status, message:message, data:user.getId});
 			res.status(status).json({status:status, message:message, data:user.getId});
 		}catch(err){
 			status = 500;

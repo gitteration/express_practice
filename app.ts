@@ -5,11 +5,13 @@ import routers from './src/routes/index';
 import session from './src/modules/authentication';
 import http from 'http';
 import startServer from './src/modules/server';
-import Socket from './src/modules/socket-io';
+import { startSocketIO } from './src/modules/socket-io';
 
+declare global {
+    var socket : any
+}
 const app = express();
 const server = http.createServer(app);
-const socket = new Socket(server, null);
 
 // session 적용 
 app.use(session);
@@ -35,7 +37,7 @@ app.use(function (err:Error , req: Request, res: Response, next: NextFunction) {
 });
 
 // start socket
-socket.start();
+startSocketIO(server);
 
 // start server
 startServer(server);
