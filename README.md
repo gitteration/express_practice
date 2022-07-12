@@ -13,7 +13,6 @@ login template - Copyright ©2022 - Colorlib All rights reserved Source https://
 
 ### Goal
 Step 1 🏃  
-  - branch main
   - Swagger 적용
   - TypeScript 적용   
   - Session 적용
