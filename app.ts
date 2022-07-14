@@ -7,9 +7,6 @@ import http from 'http';
 import startServer from './src/modules/server';
 import { startSocketIO } from './src/modules/socket-io';
 
-declare global {
-    var socket : any
-}
 const app = express();
 const server = http.createServer(app);
 
