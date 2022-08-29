@@ -1,9 +1,8 @@
 # MyStudySpace  
 ### Version  
-  - Node - 16.13.2
+  - Node(Express) - 16.13.2
   - MariaDB - 10.4.14
   - TypeScript - 4.7.2
-
   
 ![화면 캡처 2022-07-05 140743](https://user-images.githubusercontent.com/55491073/177253586-211fd015-9804-4d83-bbf2-d0ab5f436d30.png)  
 it's project index page  
